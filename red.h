@@ -6,6 +6,7 @@
 class red
 {
 public:
+    void agregar_ruta(char nombre, char ruta, int costo);
     void agregar_enrutador(char nombre);
     void eliminar_enrutador(char nombre);
     void eliminar_enlace_red(char nombre);

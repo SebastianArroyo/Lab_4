@@ -1,5 +1,13 @@
 #include "red.h"
 
+void red::agregar_ruta(char nombre, char ruta, int costo)
+{
+    enrutador router;
+    router.agregar_enlace(ruta,costo);
+    net.insert(pair<char,enrutador>(nombre,router));
+    net[ruta].agregar_enlace(nombre,costo);
+}
+
 void red::agregar_enrutador(char nombre)
 {
     enrutador router;
